@@ -1,34 +1,34 @@
 id: io.github.savantsavior.lettersfall
-runtime: org.freedesktop.Platform
-runtime-version: '26.08'
-sdk: org.freedesktop.Sdk
-base: org.godotengine.godot.BaseApp
-base-version: '4.7'
-command: godot-runner
+    runtime: org.freedesktop.Platform
+    runtime-version: '26.08'
+    sdk: org.freedesktop.Sdk
+    base: org.godotengine.godot.BaseApp
+    base-version: '4.7'
+    command: godot-runner
 
-finish-args:
-  - --share=ipc
-  - --socket=fallback-x11
-  - --socket=wayland
-  - --socket=pulseaudio
-  - --device=all
+    finish-args:
+      - --share=ipc
+      - --socket=fallback-x11
+      - --socket=wayland
+      - --socket=pulseaudio
+      - --device=all
 
-modules:
-  - name: lettersfall
-    buildsystem: simple
+    modules:
+      - name: lettersfall
+        buildsystem: simple
 
-    sources:
-      - type: archive
-        url: https://github.com/savantsavior/lettersfall/archive/refs/tags/v1.0.1.tar.gz
-        sha256: 60e7d90cca6b5579eed465773901c0b9e642cb2dd8c306df2260f918c75d8567
+        sources:
+          - type: archive
+            url: https://github.com/savantsavior/lettersfall/archive/refs/tags/v1.0.2.tar.gz
+            sha256: 84e435831818b9f587d557fb5c2d7d63ec6363ae78018517901b9c337d0ea9e9
 
-      - type: file
-        url: https://github.com/savantsavior/lettersfall/releases/download/v1.0.1/LetterssFall-Linux-R1.pck
-        sha256: 8ce5e15e8066eb762389d06b444b7365e71a61e6a2d16a912782194fa15677a8
+          - type: file
+            url: https://github.com/savantsavior/lettersfall/releases/download/v1.0.1/LetterssFall-Linux-R1.pck
+            sha256: 8ce5e15e8066eb762389d06b444b7365e71a61e6a2d16a912782194fa15677a8
 
-    build-commands:
-      - install -Dm644 LetterssFall-Linux-R1.pck ${FLATPAK_DEST}/bin/godot-runner.pck
-      - install -Dm644 ${FLATPAK_ID}.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
-      - install -Dm644 ${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
-      - install -Dm644 ${FLATPAK_ID}.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
-      - install -Dm644 LICENSE ${FLATPAK_DEST}/share/licenses/${FLATPAK_ID}/LICENSE
+        build-commands:
+          - install -Dm644 LetterssFall-Linux-R1.pck ${FLATPAK_DEST}/bin/godot-runner.pck
+          - install -Dm644 ${FLATPAK_ID}.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
+          - install -Dm644 ${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
+          - install -Dm644 ${FLATPAK_ID}.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
+          - install -Dm644 LICENSE ${FLATPAK_DEST}/share/licenses/${FLATPAK_ID}/LICENSE
