@@ -19,15 +19,15 @@ modules:
 
     sources:
       - type: archive
-        url: https://github.com/savantsavior/lettersfall/archive/refs/tags/v1.0.1.tar.gz
-        sha256: 60e7d90cca6b5579eed465773901c0b9e642cb2dd8c306df2260f918c75d8567
+        url: https://github.com/savantsavior/lettersfall/archive/refs/tags/v1.1.1.tar.gz
+        sha256: 80eeacc563c082fc15d10005bf447e5cf8f07269f3cc3c8f4f0f0b8fd66aa57e
 
       - type: file
-        url: https://github.com/savantsavior/lettersfall/releases/download/v1.0.1/LetterssFall-Linux-R1.pck
-        sha256: 8ce5e15e8066eb762389d06b444b7365e71a61e6a2d16a912782194fa15677a8
+        url: https://github.com/savantsavior/lettersfall/releases/download/v1.1.1/LettersFall-Linux-R2a.pck
+        sha256: 2e17228272d465b89d81d48e3a6872af8fabcc5bf75220dd76a344001fcab17d
 
     build-commands:
-      - install -Dm644 LetterssFall-Linux-R1.pck ${FLATPAK_DEST}/bin/godot-runner.pck
+      - install -Dm644 LettersFall-Linux-R2a.pck ${FLATPAK_DEST}/bin/godot-runner.pck
       - install -Dm644 ${FLATPAK_ID}.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
       - install -Dm644 ${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
       - install -Dm644 ${FLATPAK_ID}.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
